@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/index.css">
+    <title>Professional Solutions Group</title>
+    <link rel="icon" href="/img/logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <header>
+        <a id="logo" href="/">
+            <picture><img src="/img/logo.png" alt=""></picture>
+            <picture><img id="name" src="/img/name.png" alt=""></picture>
+        </a>
+        <div>
+            <nav>
+                <a href="#">Areas</a>
+                <a href="#about-link">Sobre nosotros</a>
+                <a href="#contact-cont">Contacto</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <input type="radio" name="complete-areas" id="extend" value="extend">
+        <input type="radio" name="complete-areas" id="none" value="none" checked>
+        <section class="cont" id="areas-cont">
+            <h2 class="title" id="areas-title">Nuestras áreas</h2>
+            <div class="element" id="areas">
+                <article class="each-area">
+                    <picture><img src="/img/plomeria.jpg" alt=""></picture>
+                    <span></span>
+                    <h3>Plomería</h3>
+                </article>
+                <article class="each-area">
+                    <picture><img src="/img/remodelaciones.jpg" alt=""></picture>
+                    <span></span>
+                    <h3>Remodelaciones</h3>
+                </article>
+                <article class="each-area">
+                    <picture><img src="/img/quinchos.jpg" alt=""></picture>
+                    <span></span>
+                    <h3>Quinchos</h3>
+                </article>
+                <article class="each-area">
+                    <picture><img src="/img/muebleria.jpg" alt=""></picture>
+                    <span></span>
+                    <h3>Mueblería</h3>
+                </article>
+                <article class="each-area">
+                    <picture><img src="/img/desagues.jpg" alt=""></picture>
+                    <span></span>
+                    <h3>Desagües</h3>
+                </article>
+                <article class="each-area">
+                    <picture><img src="/img/cerramientos.jpg" alt=""></picture>
+                    <span></span>
+                    <h3>Cerramientos</h3>
+                </article>
+                <article class="each-area">
+                    <picture><img src="/img/techos.jpg" alt=""></picture>
+                    <span></span>
+                    <h3>Techos</h3>
+                </article>
+            </div>
+            <label for="extend">Mostrar más</label>
+            <label for="none">Mostrar menos</label>
+        </section>
+        <section class="cont" id="about-cont">
+            <span id="about-link"></span>
+            <h2 class="title" id="about-title">Sobre nosotros</h2>
+            <div class="element" id="about">
+                <p>
+                    Somos una empresa nacida con el propósito de encontrar las soluciones a todos los problemas edilicios diarios, buscando ademas de soluciones, optimizar la vida de nuestros clientes, haciendo realidad las remodelaciones soñadas, los proyectos pensados, e incluso, mejorar todo lo mencionado para potenciar al máximo sus proyectos. hacemos realidad los proyectos imaginados..."En esta vida, todo tiene solución".
+                </p>
+            </div>
+        </section>
+        <section class="cont" id="contact-cont">
+            <span id="contact-link"></span>
+            <h2 class="title" id="contact-title">Contacto</h2>
+            <div class="element" id="contact">
+                <div>
+                    <span><i class="fa-brands fa-square-instagram"></i><p>professional_solutions_group</p></span>
+                    <span><i class="fa-brands fa-square-facebook"></i></span>
+                    <span><i class="fa-solid fa-envelope"></i></span>
+                </div>
+                <form id="contact-form">
+                    <label for="name">Nombre</label>
+                    <input type="text" name="name" id="name">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" name="email" id="email">
+                    <label for="message">Tu mensaje</label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <nav>
+            <a href="#">Areas</a>
+            <a href="#about-link">Sobre nosotros</a>
+            <a href="#contact-cont">Contacto</a>
+        </nav>
+        <p>Copyright ® 2022 Professional Solutions Group | Desarrollado por LuluAylen00</p>
+    </footer>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('RY3ImpbtLlk5wmwxr');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('service_psgform', 'template_an7683k', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>

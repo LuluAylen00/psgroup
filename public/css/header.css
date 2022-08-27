@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Rubik', sans-serif;
+}
+
+*:link {
+    color: inherit;
+}
+
+:root {
+    --main: rgba(29, 29, 29);
+    --white: snow;
+    --grey: rgba(228, 228, 228, 0.8);
+  }
+
+a:visited {
+    color: inherit;
+}
+
+header {
+    background-color: rgb(29, 29, 29);
+    width: 100vw;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: sticky;
+    top: 0;
+    z-index: 9;
+}
+
+header #logo {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+header picture {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header picture img {
+    height: 90%;
+}
+
+header picture img#name {
+    display: none;
+}
+
+header div {
+    display: flex;
+    height: 50%;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+header div nav {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+    justify-content: space-evenly;
+    left: -10px;
+    width: 65vw;
+    color: snow;
+}
+header div nav a {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(35, 35, 35)
+}
+header div nav a:active {
+    background-color: snow;
+    color: rgb(29, 29, 29);
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        height: 23vh;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    header picture img {
+        height: 80%;
+    }
+    header #logo {
+        left: 30px;
+    }
+    header div nav {
+        width: 60vw;
+    }
+    header div nav a {
+        background-color: rgb(31, 31, 31);
+        font-size: 1.4rem;
+    }
+    header picture img#name {
+        display: inline-block;
+    }
+}
+
