@@ -164,18 +164,18 @@ input[type="radio"]#extend:checked ~ #areas-cont label[for="none"] {
     justify-content: space-around;
 }
 
-#contact div span {
+#contact div a {
     display: flex;
     align-items: center;
     margin: 15px;
 }
 
-#contact div span p {
+#contact div a p {
     margin: 10px;
     font-size: 1.2em;
 }
 
-#contact div span i {
+#contact div a i {
     margin: 4px;
     font-size: 2.1em;
 }

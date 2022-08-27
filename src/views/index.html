@@ -92,9 +92,10 @@
             <h2 class="title" id="contact-title">Contacto</h2>
             <div class="element" id="contact">
                 <div>
-                    <span><i class="fa-brands fa-square-instagram"></i><p>professional_solutions_group</p></span>
-                    <span><i class="fa-brands fa-square-facebook"></i></span>
-                    <span><i class="fa-solid fa-envelope"></i></span>
+                    <a href="https://www.instagram.com/professional_solutions_group/" target=”_blank”><i class="fa-brands fa-square-instagram"></i><p>professional_solutions_group</p></a>
+                    <a href="https://wa.me/5491139224119" target=”_blank”><i class="fa-brands fa-square-whatsapp"></i><p>+54 9 11 3922-4119</p></a>
+                    <a target=”_blank”><i class="fa-brands fa-square-facebook"></i><p>Facebook (Proximamente)</p></a>
+                    <a target=”_blank”><i class="fa-solid fa-envelope"></i><p>Correo (Proximamente)</p></a>
                 </div>
                 <form id="contact-form">
                     <label for="name">Nombre</label>
@@ -130,12 +131,19 @@
                 // these IDs from the previous steps
                 emailjs.sendForm('service_psgform', 'template_an7683k', this)
                     .then(function() {
+                        alert("Se ha enviado el mensaje, nos contactaremos contigo a la brevedad!");
                         console.log('SUCCESS!');
+                        function reset() {
+                            document.getElementById("contact-form").reset();
+                        }
+                        reset();
                     }, function(error) {
+                        alert("Algo ha fallado, no se ha podido entregar el mensaje")
                         console.log('FAILED...', error);
                     });
             });
-        }
+        };
+
     </script>
 </body>
 </html>
