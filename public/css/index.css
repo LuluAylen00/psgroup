@@ -47,7 +47,7 @@ main {
 #areas article.each-area h3 {
     z-index: 2;
     font-size: 1.5em;
-    text-shadow: 3px 3px 2px rgba(255, 255, 255, 0.5);
+    text-shadow: 4px 2px 8px rgba(255, 255, 255, 0.8);
 }
 
 #areas article.each-area span {
@@ -78,7 +78,7 @@ input[type="radio"] {
 }
 #areas-cont label[for="extend"] {
     position: absolute;
-    bottom: 10%;
+    bottom: 5%;
     font-size: 1.3rem;
     padding: 8px;
     width: 100%;
@@ -119,6 +119,9 @@ input[type="radio"]#extend:checked ~ #areas-cont label[for="none"] {
     justify-content: space-around;
     height: auto;
     position: relative;
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
 }
 
 #about-link {
@@ -152,36 +155,49 @@ input[type="radio"]#extend:checked ~ #areas-cont label[for="none"] {
 
 #contact {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
+    width: 100%;
 }
 
-#contact div, #contact form {
-    width: 50%;
+#contact nav, #contact form {
     display: flex;
     flex-direction: column;
-    margin: 30px;
     justify-content: space-around;
 }
 
-#contact div a {
+#contact nav a {
     display: flex;
     align-items: center;
     margin: 15px;
 }
 
-#contact div a p {
+#contact nav a p {
     margin: 10px;
+    overflow-wrap: anywhere;
     font-size: 1.2em;
 }
 
-#contact div a i {
+#contact nav a i {
     margin: 4px;
     font-size: 2.1em;
 }
 
+#contact form fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    padding: 2px;
+}
+
 #contact form label {
     margin: 10px 0 5px 5px;
+}
+
+#contact form input, #contact form textarea {
+    padding: 7px;
+    font-size: 1.2rem;
+    margin: 2px 1px;
 }
 
 textarea { 
@@ -232,11 +248,29 @@ footer nav a {
     }
 
     #areas article.each-area span {
-        opacity: 0;
+        opacity: 0.3;
         transition: all 0.5s;
     }
 
     #areas-cont label {
         display: none;
+    }
+
+    #contact {
+        flex-direction: row;
+    }
+
+    #contact-cont h2 {
+        margin-bottom: 15px;
+    }
+
+    #contact nav, #contact form {
+        width: 100%;
+    }
+
+    #contact nav a {
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 }

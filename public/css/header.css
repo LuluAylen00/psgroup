@@ -23,35 +23,28 @@ a:visited {
 header {
     background-color: rgb(29, 29, 29);
     width: 100vw;
-    height: 20vh;
+    /* height: 20vh; */
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     position: sticky;
     top: 0;
     z-index: 9;
+    overflow: hidden;
 }
 
 header #logo {
-    position: absolute;
-    top: 0;
-    left: 10px;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+    width: 100%;
 }
 
 header picture {
-    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 header picture img {
-    height: 90%;
+    width: 30%;
 }
 
 header picture img#name {
@@ -69,11 +62,9 @@ header div {
 header div nav {
     display: flex;
     flex-direction: row;
-    position: relative;
     align-items: center;
     justify-content: space-evenly;
-    left: -10px;
-    width: 65vw;
+    width: 100%;
     color: snow;
 }
 header div nav a {
@@ -82,35 +73,101 @@ header div nav a {
     justify-content:center;
     height: 100%;
     width: 100%;
-    background-color: rgb(35, 35, 35)
+    background-color: rgb(35, 35, 35);
+    padding: 15px;
+    text-align: center;
 }
 header div nav a:active {
     background-color: snow;
     color: rgb(29, 29, 29);
 }
 
+
+footer nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+footer p {
+    text-align: center;
+}
+
+header #logo-desktop {
+    display: none;
+}
+
 @media screen and (min-width: 768px) {
     header {
         height: 23vh;
     }
+    header div {
+        width: 70%;
+        align-self: flex-end;
+    }
+    header picture img {
+        width: 20%;
+        position: absolute;
+        top: 15px;
+        left: 15px;
+    }
+    header #logo {
+        position: absolute;
+        top: 0;
+        /* left: 10px;
+        height: 100%; */
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    header nav a {
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    header picture img {
+        width: 15%;
+    }
 }
 
 @media screen and (min-width: 1280px) {
-    header picture img {
-        height: 80%;
+    header {
+        display: flex;
+        flex-direction: row;
     }
+    
+    header #logo-desktop {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        left: 20px;
+    }
+    header #logo-desktop picture {
+        width: 27%;
+        height: 100%;
+    }
+    header #logo-desktop picture img {
+        display: flex;
+        width: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
     header #logo {
-        left: 30px;
+        display: none;
     }
+
     header div nav {
         width: 60vw;
     }
     header div nav a {
         background-color: rgb(31, 31, 31);
         font-size: 1.4rem;
-    }
-    header picture img#name {
-        display: inline-block;
     }
 }
 
